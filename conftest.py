@@ -4,25 +4,6 @@ from pytest_html import extras
 from selenium import webdriver
 driver = None
 
-@pytest.fixture(scope="class")
-def setup():
-    x = 'abc'
-    y = 'qwe'
-    assert 'ab' in x, 'Element not found'
-    yield
-    print('Random letters')
-
-@pytest.fixture(scope="class")
-def dataload():
-    print('Enter the customer details:')
-    return ['Meghna', 'Tyndale', 'lunu.malu@kuchupuchu.com']
-
-
-@pytest.fixture(params=[('Chrome', 'Lunu', '34'), ('Firefox', 'Malu', '26'), ('IE', 'Haru', '31')])
-def crossbrowsertest(request):
-    return request.param
-
-
 def pytest_addoption(parser):
     parser.addoption(
         "--browser_name", action="store", default="chrome", help="browser selection"
