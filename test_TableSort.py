@@ -9,7 +9,7 @@ def test_tablesort(browser_select):
     driver.maximize_window()
     browserSortedVeggies = []  # empty list
     dropdown = Select(driver.find_element(By.CSS_SELECTOR, '#page-menu'))
-    dropdown.select_by_visible_text('20')
+    dropdown.select_by_visible_text('60')
 
     # soring the column 1
     driver.find_element(By.XPATH, '//tr/th[1]').click()
